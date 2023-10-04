@@ -1,11 +1,172 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue sur Stapp-ULK</title>
+    <title>Safari Car | la plateforme de location de voitures</title>
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header  class="safMutu">
+        <div class="imgLogo">
+            <img src="public/images/logo.jpg" alt="">
+            <h2>Safari <span>Car</span></h2>
+        </div>
+        <nav class="safMenu">
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="voitures.php">Voitures</a></li>
+                <li><a href="#service">Services</a></li>
+                <!-- <li><a href="">Réservation</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h3>.</h3>
+    </div>
+    
+    <main>
+        <section class="safPresent">
+            <div class="safOmbre">
+                <div>
+                    <h2>Vous recherchez un véhicule ? <br> Vous êtes au bon endroit.</h2>
+                    <p>Commandez dès maintenant la voiture qui vous convient.</p>
+                </div>
+                <a href="#voirVoiture">Commander...</a>
+            </div>
+        </section>
+        <!-- fin la section presentation -->
+
+      
+
+        <!-- debut la section des voitures -->
+        <section class="lesVoitures" id="voirVoiture">
+            <h2>Offres de location de voitures</h2>
+
+            <div class="imgBloc">
+                <?php
+                    $bdd=new PDO('mysql:host=localhost; dbname=safaricar_db','root','');
+                    // connexion à la base de données->nom du bdd, nom user, mdp
+
+
+                    //selectionner toutes les voitures de la table voiture
+                    $recupVoiture = $bdd->query('SELECT * FROM voiture  ORDER BY idvoiture DESC LIMIT 4');
+                    while($recupAffi = $recupVoiture->fetch()){
+                        $idvoiture = ($recupAffi['idvoiture']);
+                        $nomvoiture = ($recupAffi['nomvoiture']);
+                        $prixvoiture = ($recupAffi['prixvoiture']);
+                            
+                ?>
+
+                <div class="blocVoiture">
+                    <img src="./public/images/img-car.jpg" alt="image de
+                    voiture">
+                    <span><?php echo $nomvoiture ?></span>
+                    <a href="reservation.php?idvoiture=<?=$idvoiture ?>#formulaire">Louer à <?=$prixvoiture ?> $</a>
+                </div>
+
+                <?php } ?>
+
+               
+
+               
+            </div>
+        </section>
+        <!-- fin la section des voitures -->
+
+        <div class="separateur">.</div>
+        <!-- debut la section avantages -->
+        <section class="lesAvantages">
+            <div class="blocAvantages">
+                <img src="./public/images/discount.svg" alt="icon avantages">
+                <span>Réductions et avantages</span>
+                <p>
+                    Lorem, ipsum dolor sit.
+                </p>
+            </div>
+
+            <div class="blocAvantages">
+                <img src="./public/images/discount.svg" alt="icon avantages">
+                <span>Réductions et avantages</span>
+                <p>
+                    Lorem, ipsum dolor sit.
+                </p>
+            </div>
+
+            <div class="blocAvantages">
+                <img src="./public/images/discount.svg" alt="icon avantages">
+                <span>Réductions et avantages</span>
+                <p>
+                    Lorem, ipsum dolor sit.
+                </p>
+            </div>
+        </section>
+        <!-- fin la section avantages -->
+
+        <!-- debut de la section service -->
+        <section class="service" id="service">
+            <div class="blocService">
+                <img src="./public/images/img-car.jpg" alt="image du service">
+                <div>
+                    <span>Service un</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="blocService">
+                <img src="./public/images/img-car.jpg" alt="image du service">
+                <div>
+                    <span>Service un</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            
+            <div class="blocService">
+                <img src="./public/images/img-car.jpg" alt="image du service">
+                <div>
+                    <span>Service un</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+        <!-- fin de la section service -->
+
+        <!-- debut de la section nos partenaires -->
+        <section class="lesPartenaires">
+            <h3>Nos partenaires</h3>
+            <div>
+                <img src="./public/images/logo.jpg" alt="">
+                <img src="./public/images/logo.jpg" alt="">
+                <img src="./public/images/logo.jpg" alt="">
+                <img src="./public/images/logo.jpg" alt="">
+                <img src="./public/images/logo.jpg" alt="">
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <div class="imgLogo">
+            <img src="public/images/logo.jpg" alt="">
+            <h2>Safari <span>Car</span></h2>
+        </div>
+
+
+        <div class="formuContact">
+            <label for="">Contactez nous</label>
+            <input type="text" placeholder="Votre adresse... ">
+        </div>
+
+        
+
+    </footer>
+
+
     
 </body>
 </html>

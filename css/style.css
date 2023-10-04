@@ -1,0 +1,322 @@
+:root{
+    --primary-color: #dcb853;
+    --secondary-color: #333334;
+    --other-color : #eadca7;
+    --light-color : #ffffff;
+    --size-title : 4rem;
+    --padding-block : 2rem 4rem;
+    --padding-rl : 8rem;
+    --padding-tb : 5rem;
+    --title-text : 'Mooli', sans-serif;
+    --btn-text : 'Merriweather', serif;
+    --normal-text : 'Rozha One', serif;
+
+}
+* {
+    padding: 0;
+    margin: 0;
+    color: #333334;
+    font-family: var(--normal-text);
+  }
+/* style for title */
+h1,h2,h3,h4{
+    color: #dcb853;
+}
+/* style for input */
+input, textarea{
+    border-radius: 0.8rem;
+    border: none;
+}
+/* style for button */
+button{
+    border-radius: 0.8rem;
+    border: none;
+    padding: 1rem  1.5rem;
+    font-family: var(--btn-text);
+    cursor: pointer;
+}
+/* style for link */
+a{
+    text-decoration: none;
+    color: #333334;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-family: var(--btn-text);
+    border-radius: 2rem;
+}
+a:hover{
+    border: 1px inset #333334;
+    background-color: transparent;
+    color: #333334;
+}
+/*style for header */
+.safMutu{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  2rem 4rem;
+    background-color: #ffffff;
+    border-bottom: 3px outset #333334;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 3px 2px 4px #333334;
+}
+.imgLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgLogo img{
+    width: 6rem;
+    /* height: 3rem; */
+} 
+.safMenu ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+.safMenu a:hover{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px inset #dcb853;
+    color: #dcb853b6;
+}
+
+
+
+    /*style for section presentation */
+.safPresent{
+    background-image: url('../images/bg-cars2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+.safOmbre h2{
+    font-size: 3rem;
+}
+.safPresent p{
+    color: #ffffff;
+}
+.safPresent a{
+    background-color: #dcb853;
+}
+.safPresent a:hover{
+    background-color: transparent;
+    border: 3px outset #ffffff;
+    color: #ffffff;
+}
+.safOmbre{
+    background-color: #111;
+    opacity: 0.9;
+    height: 60vh;
+    padding:  2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    /*style for section formReserv */
+
+.formReserv{
+    background-color: #dcb853;
+    padding:  2rem 4rem;
+    display: flex;
+    flex-direction: column; /* aligner en forme de colonne */
+}
+.formReserv h3{
+    font-size: 2rem;
+    color: #333334;
+    margin-bottom: 2rem; /* margin en bas */
+}
+.formReserv .lesChamps{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* espace entre les blocs */
+}
+.lesChamps div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+.lesChamps input{
+    padding: 1rem  0.5rem;
+    font-family: var(--normal-text);
+    font-size: 1.2rem;
+}
+.lesChamps button{
+    font-size: 1.2rem;
+    background-color: #333334;
+    color: #dcb853;
+    cursor: pointer;
+}
+.lesChamps button:hover{
+    border: 1px inset #333334;
+    background-color: transparent;
+    color: #333334;
+}
+
+/*  style de la section des voitures --> */
+
+.lesVoitures{
+    padding:  2rem 4rem;
+}
+.lesVoitures h2{
+    color: #333334;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+.lesVoitures .imgBloc{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem; /* espace entre les blocs */
+    margin: 4rem 0;
+}
+.blocVoiture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+.blocVoiture img{
+    width: 16rem;
+    height: 15rem;
+    border: 3px inset #dcb853;
+    border-radius: 0.7rem;
+}
+.blocVoiture span{
+    font-size: 2rem;
+}
+.blocVoiture a{
+    background-color: #dcb853;
+    text-align: center;
+}
+.blocVoiture a:hover{
+    background-color: transparent;
+}
+.separateur{
+    background-color: var(--other-color);
+    height: 5vh;
+    opacity: 1;
+}
+/*  style de la section des avantages --> */
+.lesAvantages, .service{
+    display: flex;
+    align-content: center;
+    gap: 10rem;
+    padding: var(--padding-tb);
+    color: #333334;
+}
+
+.blocAvantages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blocAvantages span, .blocService span{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+/*  style de la section des avantages --> */
+.service{
+    background-color: var(--primary-color);
+    gap: 6rem;
+}
+.service .blocService{
+    background-color: #ffffff;
+    text-align: center;
+}
+.blocService{
+    width: 20rem;
+    border-radius: 1.1rem;
+}
+.blocService div{
+    padding: 0.6rem 0;
+}
+.blocService img{
+    width: 20rem;
+    height: 10rem;
+    border-radius: 1.1rem;
+}
+.blocService p{
+    margin: 1rem 0;
+}
+/*  style de la section les partenaires --> */
+
+.lesPartenaires{
+    padding: var(--padding-tb);
+    color: var(--secondary-color);
+}
+.lesPartenaires h3{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+.lesPartenaires div{
+    display: flex;
+    align-content: center;
+    gap: 2rem;
+}
+.lesPartenaires img{
+    width: 12rem;
+}
+/*  style du footer --> */
+.formuContact{
+    display: flex;
+    flex-direction: column;
+}
+.formuContact input{
+    padding: 1rem 0.2rem;
+    border: 2px outset var(--secondary-color);
+}
+footer{
+    display: flex;
+    align-content: center;
+    gap: 3rem;
+    padding: var(--padding-tb);
+    color: var(--secondary-color);
+    border-top: 20px outset var(--primary-color);
+}
+/*-----style de la page reservation----------*/
+.formReservation{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 3px outset var(--secondary-color);
+    border-radius: 1.5rem;
+    margin: 0 15rem;
+    padding:  2rem 4rem;
+}
+.formReservation div{
+    display: flex;
+    flex-direction: column;
+}
+.formReservation input{
+    margin: 0.3rem 0;
+    border-bottom: 2px outset var(--secondary-color);
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+.formReservation input:hover{
+    color: var(--secondary-color);
+    background-color: var(--other-color);
+}
+.formReservation button{
+    background-color: var(--other-color);
+    color: var(--secondary-color);
+    font-family: var(--btn-text);
+    font-weight: 600;
+    cursor: pointer;
+}
+.formReservation button:hover{
+    border: 3px outset var(--other-color);
+    background-color: none;
+}
+
