@@ -1,8 +1,10 @@
 :root{
-    --primary-color: #dcb853;
-    --secondary-color: #333334;
-    --other-color : #eadca7;
-    --light-color : #ffffff;
+    --primary-color: #efe50f;
+    --secondary-color: #e31014;
+    --other-color : #3eab35;
+    --other2-color : #ec9e14;
+    --dark-color : #525252;
+    --light-color : #525252;
     --size-title : 4rem;
     --padding-block : 2rem 4rem;
     --padding-rl : 8rem;
@@ -18,16 +20,16 @@
     color: #333334;
     font-family: var(--normal-text);
   }
-/* style for title */
+/* style de title */
 h1,h2,h3,h4{
-    color: #dcb853;
+    color: var(--primary-color);
 }
-/* style for input */
+/* style de input */
 input, textarea{
     border-radius: 0.8rem;
     border: none;
 }
-/* style for button */
+/* style de button */
 button{
     border-radius: 0.8rem;
     border: none;
@@ -35,7 +37,7 @@ button{
     font-family: var(--btn-text);
     cursor: pointer;
 }
-/* style for link */
+/* style de link */
 a{
     text-decoration: none;
     color: #333334;
@@ -45,11 +47,11 @@ a{
     border-radius: 2rem;
 }
 a:hover{
-    border: 1px inset #333334;
+    border: 1px inset var(--dark-color);
     background-color: transparent;
-    color: #333334;
+    color: var(--dark-color);
 }
-/*style for header */
+/*style de header */
 .safMutu{
     position: fixed;
     top: 0;
@@ -61,8 +63,8 @@ a:hover{
     padding:  2rem 4rem;
     background-color: #ffffff;
     border-bottom: 3px outset #333334;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     box-shadow: 3px 2px 4px #333334;
 }
 .imgLogo{
@@ -71,7 +73,7 @@ a:hover{
     align-items: center;
 }
 .imgLogo img{
-    width: 6rem;
+    width: 5rem;
     /* height: 3rem; */
 } 
 .safMenu ul{
@@ -83,17 +85,18 @@ a:hover{
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 4px inset #dcb853;
-    color: #dcb853b6;
+    border-bottom: 4px inset var(--primary-color);
+    color: var(--other-color);
 }
 
 
 
-    /*style for section presentation */
+/*style de section presentation */
 .safPresent{
-    background-image: url('../images/bg-cars2.jpg');
+    background-image: url('../images/bg-stagiaires.jpg');
     background-position: center;
     background-size: cover;
+    margin-top: 5rem;
 }
 
 
@@ -104,7 +107,7 @@ a:hover{
     color: #ffffff;
 }
 .safPresent a{
-    background-color: #dcb853;
+    background-color: var(--primary-color);
 }
 .safPresent a:hover{
     background-color: transparent;
@@ -114,13 +117,17 @@ a:hover{
 .safOmbre{
     background-color: #111;
     opacity: 0.9;
-    height: 60vh;
-    padding:  2rem 4rem;
+    height: 100vh;
+    padding:  2rem 20rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+
 }
-    /*style for section formReserv */
+    /*style de section formReserv */
 
 .formReserv{
     background-color: #dcb853;
