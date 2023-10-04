@@ -18,7 +18,6 @@
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="#service">Stages</a>   </li>
                 <li><a href="#service">Stagiaires</a></li>
-                <!-- <li><a href="">Réservation</a></li> -->
             </ul>
         </nav>
     </header>
@@ -26,6 +25,8 @@
     
     
     <main>
+        
+        <!-- debut la section presentation -->
         <section class="safPresent">
             <div class="safOmbre">
                 <h2>Vous avez besoin d'un stage ?, Vous êtes au bon endroit.</h2>
@@ -37,24 +38,11 @@
 
       
 
-        <!-- debut la section des voitures -->
+        <!-- debut la section explication sur stapp ULK -->
         <section class="lesVoitures" id="voirVoiture">
             <h2>Offres de location de voitures</h2>
 
             <div class="imgBloc">
-                <?php
-                    $bdd=new PDO('mysql:host=localhost; dbname=safaricar_db','root','');
-                    // connexion à la base de données->nom du bdd, nom user, mdp
-
-
-                    //selectionner toutes les voitures de la table voiture
-                    $recupVoiture = $bdd->query('SELECT * FROM voiture  ORDER BY idvoiture DESC LIMIT 4');
-                    while($recupAffi = $recupVoiture->fetch()){
-                        $idvoiture = ($recupAffi['idvoiture']);
-                        $nomvoiture = ($recupAffi['nomvoiture']);
-                        $prixvoiture = ($recupAffi['prixvoiture']);
-                            
-                ?>
 
                 <div class="blocVoiture">
                     <img src="./public/images/img-car.jpg" alt="image de
